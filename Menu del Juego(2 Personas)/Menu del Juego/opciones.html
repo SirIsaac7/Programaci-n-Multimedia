@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opciones del Juego</title>
+    <link rel="stylesheet" href="css/styles1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="options-panel">
+            <h1>Opciones del Juego</h1>
+            
+            <div class="option-group">
+                <h2>Sonido</h2>
+                <div class="option-control">
+                    <label for="volume">Volumen:</label>
+                    <input type="range" id="volume" min="0" max="100" value="70">
+                    <span id="volume-value">70%</span>
+                </div>
+                <div class="option-control">
+                    <label for="music">Música:</label>
+                    <input type="checkbox" id="music" checked>
+                </div>
+                <div class="option-control">
+                    <label for="effects">Efectos:</label>
+                    <input type="checkbox" id="effects" checked>
+                </div>
+            </div>
+            
+            <div class="option-group">
+                <h2>Gráficos</h2>
+                <div class="option-control">
+                    <label for="quality">Calidad:</label>
+                    <select id="quality">
+                        <option value="low">Baja</option>
+                        <option value="medium" selected>Media</option>
+                        <option value="high">Alta</option>
+                    </select>
+                </div>
+                <div class="option-control">
+                    <label for="fullscreen">Pantalla completa:</label>
+                    <input type="checkbox" id="fullscreen">
+                </div>
+            </div>
+            
+            <div class="option-group">
+                <h2>Controles</h2>
+                <div class="option-control">
+                    <label for="sensitivity">Sensibilidad:</label>
+                    <input type="range" id="sensitivity" min="1" max="10" value="5">
+                    <span id="sensitivity-value">5</span>
+                </div>
+                <div class="option-control">
+                    <label for="invert-y">Invertir eje Y:</label>
+                    <input type="checkbox" id="invert-y">
+                </div>
+            </div>
+            
+            <div class="buttons">
+                <button id="save-btn">Guardar</button>
+                <button id="reset-btn">Restablecer</button>
+                <button id="back-btn">Volver</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/options.js"></script>
+</body>
+</html>

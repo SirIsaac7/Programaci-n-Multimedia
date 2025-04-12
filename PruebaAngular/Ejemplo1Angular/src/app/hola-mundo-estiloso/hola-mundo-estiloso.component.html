@@ -1,0 +1,17 @@
+<div
+  class="min-h-screen bg-gradient-to-br from-purple-800 via-pink-500 to-yellow-400 flex flex-col justify-center items-center text-white text-center relative"
+  [@fadeInUp]
+>
+  <h1 class="text-5xl font-extrabold drop-shadow-lg animate-pulse">¡Hola Mundo!</h1>
+  <p class="mt-4 text-xl font-light">Hecho con Angular y mucho estilo</p>
+  <p class="mt-4 text-xl font-light">Isaac Alejandro Tola ✨</p>
+
+  <button
+    class="mt-10 px-6 py-3 bg-white text-purple-800 font-bold rounded-full shadow-lg hover:scale-105 transform transition duration-300"
+  >
+    ¡Sorpréndete!
+  </button>
+
+  <!-- Burbujas -->
+  <div *ngFor="let drop of drops" class="drop" [ngStyle]="drop.style"></div>
+</div>

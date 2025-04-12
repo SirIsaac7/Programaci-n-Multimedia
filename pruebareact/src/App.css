@@ -1,0 +1,96 @@
+/* src/App.css */
+
+body, html, #root, .App {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.App {
+  position: relative;
+}
+
+.animated-gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #ff007f);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  z-index: -2;
+}
+
+/* Animación del gradiente */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 4rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  animation: fadeIn 2s ease-out, float 4s ease-in-out infinite;
+  text-align: center;
+}
+
+/* Efecto de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* Movimiento sutil */
+@keyframes float {
+  0% { transform: translate(-50%, -50%); }
+  50% { transform: translate(-50%, -52%); }
+  100% { transform: translate(-50%, -50%); }
+}
+
+.fire-text span {
+  display: inline-block;
+  color: #ffcc00;
+  text-shadow:
+    0 0 5px #ff9900,
+    0 0 10px #ff3300,
+    0 0 20px #ff0000,
+    0 0 40px #ff6600;
+  animation: flame 1.2s infinite ease-in-out alternate;
+}
+
+/* Variación aleatoria entre letras */
+.fire-text span:nth-child(odd) {
+  animation-duration: 1.4s;
+}
+.fire-text span:nth-child(even) {
+  animation-duration: 1s;
+}
+
+@keyframes flame {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    text-shadow:
+      0 0 5px #ff9900,
+      0 0 10px #ff3300,
+      0 0 20px #ff0000,
+      0 0 40px #ff6600;
+  }
+  100% {
+    transform: translateY(-5px) scale(1.05);
+    opacity: 0.9;
+    text-shadow:
+      0 0 10px #ff6600,
+      0 0 20px #ff3300,
+      0 0 30px #cc0000,
+      0 0 50px #ff3300;
+  }
+}

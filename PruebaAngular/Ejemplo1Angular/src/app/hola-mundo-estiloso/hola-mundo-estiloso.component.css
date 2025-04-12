@@ -1,0 +1,20 @@
+@keyframes bubbleRise {
+    0% {
+      transform: translateY(100vh) scale(0.5);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) scale(1.5); /* Hace que suban fuera del área visible */
+      opacity: 0;
+    }
+  }
+  
+  .drop {
+    position: fixed;
+    border-radius: 50%;
+    background-color: rgba(173, 216, 230, 0.8); /* Azul claro para las burbujas */
+    animation: bubbleRise linear infinite;
+    pointer-events: none; /* Esto previene que las burbujas interfieran con los clics u otros elementos */
+  }
+  
+  
